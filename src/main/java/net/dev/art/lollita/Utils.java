@@ -1,8 +1,14 @@
 package net.dev.art.lollita;
 
+import net.dev.art.lollita.config.Config;
+import org.json.JSONObject;
+
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -13,6 +19,16 @@ public class Utils {
 
     public static void print(String msg) {
         System.out.println(name + msg);
+    }
+
+    public static void log(String msg) {
+        Instant time = Instant.now();
+        Config log =  new Config("assets/logs/log.json");
+        log.set(time + "", new JSONObject());
+        log.getSection(time+"")
+                .put("message", msg);
+        log.save();
+        print(msg);
     }
 
     public static Class[] getClasses(String packageName)

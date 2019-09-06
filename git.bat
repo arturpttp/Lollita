@@ -1,2 +1,4 @@
+start "" "%PROGRAMFILES%\Git\bin\sh.exe" --login
 git add .
-git push -u origin master
+git commit -m %1
+git push

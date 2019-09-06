@@ -1,14 +1,13 @@
-package net.dev.art.lollita.commands;
+package net.dev.art.lollita.commands.all;
 
 import net.dev.art.lollita.managers.API;
-import net.dev.art.lollita.objects.Command;
+import net.dev.art.lollita.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
 import java.time.Instant;
-import java.util.concurrent.TimeUnit;
 
 public class PingCommands extends Command {
     public PingCommands() {

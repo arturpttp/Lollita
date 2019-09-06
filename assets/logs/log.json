@@ -1,0 +1,47 @@
+{
+  "2019-09-06T19:03:55.495Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $leave -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:39:15.013Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:42.869Z":{
+    "message":"Commando: -join foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:49:37.634Z":{
+    "message":"Commando: art!help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:03:53.536Z":{
+    "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:55.065Z":{
+    "message":"Commando: -leave foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:44.018Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:08.921Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:51:13.646Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:05.648Z":{
+    "message":"Commando: -ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:43:33.249Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:49:00.452Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:03:50.565Z":{
+    "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:45:56.403Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:59.110Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  }
+}

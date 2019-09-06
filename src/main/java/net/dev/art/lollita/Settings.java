@@ -13,5 +13,6 @@ public class Settings {
 
     public static final String YOUTUBE_API_KEY = "AIzaSyAUEbrbY-BZYs-qlLRPBnAG3AHxWsXDpI8";
 
-    public static final boolean DELETE_COMMAND = true;
+    public static final boolean DELETE_COMMAND = false;
+    public static final boolean DEBUG = true;
 }

@@ -1,13 +1,13 @@
 package net.dev.art.lollita;
 
 import net.dev.art.lollita.config.Config;
+import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dev.art.lollita.objects.Bot;
-import net.dev.art.lollita.objects.Command;
+import net.dev.art.lollita.commands.Command;
 
 import javax.security.auth.login.LoginException;
 import java.io.IOException;
-import java.time.Instant;
 
 public class Lollita {
 
@@ -16,7 +16,7 @@ public class Lollita {
     private static Config config;
     private static Bot lollita;
 
-    private static void run() {
+    public static void reload() {
         config = new Config("assets/config.json");
         name = config.getString("name");
         prefix = config.getString("prefix");
@@ -24,6 +24,10 @@ public class Lollita {
         token = config.getString("token");
         storage_path = config.getString("storage_path");
         config.save();
+    }
+
+    private static void run() {
+        reload();
         try {
             lollita = new Bot(token);
             loadClasses();
@@ -40,6 +44,9 @@ public class Lollita {
                     eventsManager.register(lollita);
             }else if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
                 Command command = (Command) clz.newInstance();
+                if (!CommandManager.all.contains(command)) {
+                    CommandManager.all.add(command);
+                }
                 if (!command.registred)
                     command.register(lollita);
             }

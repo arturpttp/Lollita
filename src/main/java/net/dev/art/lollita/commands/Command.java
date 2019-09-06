@@ -1,7 +1,8 @@
-package net.dev.art.lollita.objects;
+package net.dev.art.lollita.commands;
 
 import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
+import net.dev.art.lollita.objects.Bot;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -20,15 +21,18 @@ public abstract class Command extends EventsManager {
     public TextChannel channel;
     public Bot bot;
     public boolean registred = false;
+    public Command(String invoke, String help) {
+        this(invoke, help, invoke);
+    }
 
     public Command(String invoke, String help, String usage) {
         this.invoke = invoke;
         this.help = help;
         this.usage = usage;
-    }
-
-    public Command(String invoke, String help) {
-        this(invoke, help, invoke);
+        if (!CommandManager.all.contains(this)) {
+            CommandManager.all.add(this);
+        }
+        CommandManager.addCommand(this);
     }
 
     public abstract boolean onCommand(GuildMessageReceivedEvent event, String[] args);
@@ -43,13 +47,12 @@ public abstract class Command extends EventsManager {
 
     public void register(Bot bot) {
         this.bot = bot;
-        CommandManager.addCommand(this);
         registred = true;
     }
 
     public static enum  CommandCategory {
 
-        FUNNY("Funny", Color.MAGENTA), ADMIN("Admin", Color.CYAN), MUSiC("Funny", Color.PINK), MINECRAFT("Funny", Color.GREEN), MANAGEMENT("Funny", Color.ORANGE), UTIL("Funny", Color.BLUE);
+        FUNNY("Funny", Color.MAGENTA), ADMIN("Admin", Color.CYAN), MUSIC("Music", Color.PINK), MINECRAFT("Minecraft", Color.GREEN), MANAGEMENT("Management", Color.ORANGE), UTIL("Utilities", Color.BLUE);
 
         private String name;
         private Color color;
