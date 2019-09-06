@@ -1,0 +1,10 @@
+{
+  "casino": {
+    "objective": "make a casino system that give roles or rewards",
+    "status": false
+  },
+  "Commands": {
+    "objective": "every commands",
+    "status": false
+  }
+}
