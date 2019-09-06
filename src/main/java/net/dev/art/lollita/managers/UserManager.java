@@ -1,5 +1,6 @@
 package net.dev.art.lollita.managers;
 
+import net.dev.art.lollita.Lollita;
 import net.dev.art.lollita.config.Config;
 import net.dev.art.lollita.objects.BUser;
 import net.dev.art.lollita.objects.Bot;
@@ -90,7 +91,7 @@ public class UserManager {
     }
 
     public void saveAll() {
-        Config config = new Config("users.json");
+        Config config = new Config(Lollita.storage_path+"users.json");
         users.values().forEach(user -> {
             user.toJson(config);
         });
@@ -98,7 +99,7 @@ public class UserManager {
     }
 
     public void loadAll() {
-        Config config = new Config("users.json");
+        Config config = new Config(Lollita.storage_path+"users.json");
         for (String key : config.getJSONObject().keySet()) {
             JSONObject section = config.getJSON(key);
             BUser.fromJson(section, bot, key);

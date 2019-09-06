@@ -1,6 +1,6 @@
 package net.dev.art.lollita.managers;
 
-import net.dev.art.prevented.objects.BUser;
+import net.dev.art.lollita.objects.BUser;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.TextChannel;

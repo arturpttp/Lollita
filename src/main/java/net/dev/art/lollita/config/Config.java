@@ -41,6 +41,10 @@ public class Config {
         name = split[split.length - 1];
     }
 
+    public void remove(String path) {
+        JSONObject.remove(path);
+    }
+
     public void save(String path, Object object) {
         JSONObject obj = new JSONObject();
         for (Field f : object.getClass().getDeclaredFields()) {

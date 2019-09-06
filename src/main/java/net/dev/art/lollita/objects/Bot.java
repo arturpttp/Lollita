@@ -1,12 +1,14 @@
 package net.dev.art.lollita.objects;
 
 import net.dev.art.lollita.Utils;
+import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.UserManager;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jetbrains.annotations.NotNull;
 
 import javax.security.auth.login.LoginException;
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public class Bot {
     private JDA jda;
     private JDABuilder builder;
     private UserManager userManager;
+    private CommandManager commandManager;
 
     public Bot(String token) throws LoginException {
         this.token = token;
@@ -29,12 +32,13 @@ public class Bot {
 
     private void load() throws LoginException {
         this.builder = new JDABuilder(AccountType.BOT)
-                .setActivity(playing("I'm prevented"))
-                .setStatus(OnlineStatus.DO_NOT_DISTURB)
-                .setToken(this.token)
-                .setAutoReconnect(true);
+        .setActivity(playing("I'm prevented"))
+        .setStatus(OnlineStatus.DO_NOT_DISTURB)
+        .setToken(this.token)
+        .setAutoReconnect(true);
         this.jda = this.builder.build();
         this.userManager = new UserManager(this);
+        this.commandManager = new CommandManager(this);
     }
 
     public void addListener(ListenerAdapter instance) {
@@ -91,4 +95,13 @@ public class Bot {
         return this;
     }
 
+    @NotNull
+    public CommandManager getCommandManager() {
+        return commandManager;
+    }
+
+    public Bot setCommandManager(CommandManager commandManager) {
+        this.commandManager = commandManager;
+        return this;
+    }
 }
