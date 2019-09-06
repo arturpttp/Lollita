@@ -7,6 +7,7 @@ import net.dev.art.lollita.objects.Command;
 
 import javax.security.auth.login.LoginException;
 import java.io.IOException;
+import java.time.Instant;
 
 public class Lollita {
 
@@ -33,20 +34,20 @@ public class Lollita {
 
     private static void loadClasses() throws IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         for (Class clz : Utils.getClasses("net.dev.art.lollita")) {
-            if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
-                Command command = (Command) clz.newInstance();
-                if (!command.registred)
-                    command.register(lollita);
-            }else if (EventsManager.class.isAssignableFrom(clz) && clz != EventsManager.class && clz != Command.class) {
+            if (EventsManager.class.isAssignableFrom(clz) && clz != EventsManager.class && clz != Command.class) {
                 EventsManager eventsManager = (EventsManager) clz.newInstance();
                 if (!eventsManager.registred)
                     eventsManager.register(lollita);
+            }else if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
+                Command command = (Command) clz.newInstance();
+                if (!command.registred)
+                    command.register(lollita);
             }
         }
     }
 
     public static void main(String[] args) {
-
+        run();
     }
 
 }

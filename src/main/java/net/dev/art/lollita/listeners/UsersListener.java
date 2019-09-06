@@ -47,6 +47,10 @@ public class UsersListener extends EventsManager {
 
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
+        User author = event.getAuthor();
+        if (!bot.getUserManager().exists(author.getIdLong())) {
+            bot.getUserManager().delete(author);
+        }
         BUser user = bot.getUserManager().get(event.getAuthor().getIdLong());
         if (!event.getMessage().getContentRaw().startsWith(Lollita.prefix)) {
             int xp = 5 + new Random().nextInt(15);

@@ -138,6 +138,8 @@ public class BUser {
     }
 
     public JSONObject toJson(Config config) {
+        if (config.has(id+"")) config.remove(id + "");
+        else config.set(id + "", new JSONObject());
         JSONObject obj = config.getSection(id + "")
                 .put("name", name)
                 .put("xp", xp)

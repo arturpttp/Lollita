@@ -18,7 +18,6 @@ import static net.dv8tion.jda.api.entities.Activity.playing;
 
 public class Bot {
 
-    public List<ListenerAdapter> listeners = new ArrayList<>();
     private String token;
     private JDA jda;
     private JDABuilder builder;
@@ -31,19 +30,19 @@ public class Bot {
     }
 
     private void load() throws LoginException {
-        this.builder = new JDABuilder(AccountType.BOT)
-        .setActivity(playing("I'm prevented"))
-        .setStatus(OnlineStatus.DO_NOT_DISTURB)
-        .setToken(this.token)
-        .setAutoReconnect(true);
+        this.builder = new JDABuilder(AccountType.BOT);
+        this.builder.setActivity(playing("I'm a loli and my name is carlita"));
+        this.builder.setStatus(OnlineStatus.DO_NOT_DISTURB);
+        this.builder.setToken(this.token);
+        this.builder.setAutoReconnect(true);
         this.jda = this.builder.build();
         this.userManager = new UserManager(this);
         this.commandManager = new CommandManager(this);
+        Level.setup();
     }
 
     public void addListener(ListenerAdapter instance) {
         jda.addEventListener(instance);
-        listeners.add(instance);
     }
 
     public void shutdown() {
