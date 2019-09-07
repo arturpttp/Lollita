@@ -125,6 +125,11 @@ public class EmbedManager {
         return this;
     }
 
+    public EmbedManager setFooter(String text, User user) {
+        builder.setFooter(text, user.getAvatarUrl());
+        return this;
+    }
+
     public EmbedManager setAuthor(User user) {
         builder.setAuthor(user.getName(), user.getAvatarUrl(), user.getAvatarUrl());
         return this;

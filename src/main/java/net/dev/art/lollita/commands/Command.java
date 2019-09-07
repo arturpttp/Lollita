@@ -1,6 +1,8 @@
 package net.dev.art.lollita.commands;
 
+import net.dev.art.lollita.Lollita;
 import net.dev.art.lollita.managers.CommandManager;
+import net.dev.art.lollita.managers.EmbedManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dev.art.lollita.objects.Bot;
 import net.dv8tion.jda.api.entities.Guild;
@@ -50,6 +52,21 @@ public abstract class Command extends EventsManager {
         registred = true;
     }
 
+    public EmbedManager getHelpEmbed() {
+        EmbedManager embed = new EmbedManager();
+        embed.setColor(bot.getJda().getRoles().get(0).getColor());
+        embed.setDescription("**__✔ Commando:__** ``" + Lollita.prefix + invoke + "``\n``" +
+                             help + "``\n" +
+                             "**__❔ Como usar:__** ``" + Lollita.prefix + usage + "``\n" +
+                             "**__❌ Permissões__**" + "\n``" +
+                             permission.message() + "``");
+        embed.setThumbnail(event.getJDA().getSelfUser().getAvatarUrl());
+        embed.setAuthor(event.getAuthor());
+        embed.setFooter(category.getName(), event.getJDA().getSelfUser());
+        embed.timestamp();
+        return embed;
+    }
+
     public static enum  CommandCategory {
 
         FUNNY("Funny", Color.MAGENTA), ADMIN("Admin", Color.CYAN), MUSIC("Music", Color.PINK), MINECRAFT("Minecraft", Color.GREEN), MANAGEMENT("Management", Color.ORANGE), UTIL("Utilities", Color.BLUE);
@@ -74,6 +91,22 @@ public abstract class Command extends EventsManager {
     public static enum CommandPermission {
 
         ALL, PRIVATE, ADMIN, DJ,  OWNER;
+
+        public String message() {
+            switch (this){
+                case ALL:
+                    return "Qualquer um pode usar";
+                case PRIVATE:
+                    return "Apenas no meu privado";
+                case ADMIN:
+                    return "Apenas para os adiministradores";
+                case DJ:
+                    return "Apenas para os DJs";
+                case OWNER:
+                    return "Apenas o dono";
+            }
+            return "";
+        }
 
     }
 }

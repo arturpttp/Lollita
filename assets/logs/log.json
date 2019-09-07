@@ -1,9 +1,21 @@
 {
+  "2019-09-07T00:43:51.176Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:03:55.495Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $leave -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T00:47:04.627Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:39:15.013Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:47:07.847Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:46:31.245Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
   },
   "2019-09-06T19:40:42.869Z":{
     "message":"Commando: -join foi executado com sucesso por `Artur - SA#4536`!"
@@ -17,6 +29,12 @@
   "2019-09-06T19:40:55.065Z":{
     "message":"Commando: -leave foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T00:43:57.111Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear 101 -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:48:00.309Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
   "2019-09-06T19:40:44.018Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
   },
@@ -28,6 +46,12 @@
   },
   "2019-09-06T19:40:05.648Z":{
     "message":"Commando: -ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:43:06.770Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear$clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:43:11.631Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
   },
   "2019-09-06T19:43:33.249Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
