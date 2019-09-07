@@ -1,39 +1,15 @@
 {
-  "2019-09-07T00:43:51.176Z":{
-    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
-  },
-  "2019-09-06T19:03:55.495Z":{
-    "message":"Ocorreu uma falha ao tentar executar o commando: $leave -> author -> `Artur - SA#4536`!"
-  },
-  "2019-09-07T00:47:04.627Z":{
-    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
-  },
   "2019-09-06T19:39:15.013Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
-  "2019-09-07T00:47:07.847Z":{
-    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
-  },
-  "2019-09-07T00:46:31.245Z":{
-    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  "2019-09-07T01:21:54.875Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $play -> author -> `Artur - SA#4536`!"
   },
   "2019-09-06T19:40:42.869Z":{
     "message":"Commando: -join foi executado com sucesso por `Artur - SA#4536`!"
   },
-  "2019-09-06T19:49:37.634Z":{
-    "message":"Commando: art!help foi executado com sucesso por `Artur - SA#4536`!"
-  },
-  "2019-09-06T19:03:53.536Z":{
-    "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
-  },
-  "2019-09-06T19:40:55.065Z":{
-    "message":"Commando: -leave foi executado com sucesso por `Artur - SA#4536`!"
-  },
-  "2019-09-07T00:43:57.111Z":{
-    "message":"Ocorreu uma falha ao tentar executar o commando: $clear 101 -> author -> `Artur - SA#4536`!"
-  },
-  "2019-09-07T00:48:00.309Z":{
-    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  "2019-09-07T01:44:32.763Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $celar -> author -> `Artur - SA#4536`!"
   },
   "2019-09-06T19:40:44.018Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
@@ -41,20 +17,83 @@
   "2019-09-06T19:40:08.921Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
   },
-  "2019-09-06T19:51:13.646Z":{
-    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  "2019-09-07T01:23:32.855Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $volume -> author -> `Artur - SA#4536`!"
   },
   "2019-09-06T19:40:05.648Z":{
     "message":"Commando: -ping foi executado com sucesso por `Artur - SA#4536`!"
   },
-  "2019-09-07T00:43:06.770Z":{
-    "message":"Ocorreu uma falha ao tentar executar o commando: $clear$clear -> author -> `Artur - SA#4536`!"
+  "2019-09-06T19:43:33.249Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:24:47.229Z":{
+    "message":"Commando: $volume 3 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:26.103Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:31.606Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:21:20.452Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:38:16.011Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:32:23.362Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo a -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:47:07.847Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:26:01.738Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:32:19.753Z":{
+    "message":"Commando: $userinfo <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:25:36.495Z":{
+    "message":"Commando: $pause foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:44:34.724Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:47:57.269Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:40:55.065Z":{
+    "message":"Commando: -leave foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:48:00.309Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:25:25.059Z":{
+    "message":"Commando: $playing foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:44:30.184Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:23:38.039Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $volume 10 10 -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:38:10.383Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear 1000 -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:25:33.225Z":{
+    "message":"Commando: $playing foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:45.522Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T00:43:11.631Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
   },
-  "2019-09-06T19:43:33.249Z":{
-    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  "2019-09-07T01:35:50.085Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:44:38.135Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-06T19:49:00.452Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
@@ -65,7 +104,100 @@
   "2019-09-06T19:45:56.403Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T01:37:18.332Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:43:51.176Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:36.228Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $play -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:03:55.495Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $leave -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:25.323Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:46:31.245Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:49:37.634Z":{
+    "message":"Commando: art!help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:23:22.371Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $play -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:24:28.956Z":{
+    "message":"Commando: $volume 5 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:56.028Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:31.268Z":{
+    "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:22:06.225Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $play -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:45:35.338Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:51:13.646Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:39.809Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $music -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:25:30.404Z":{
+    "message":"Commando: $pause foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:19.473Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:24:13.827Z":{
+    "message":"Commando: $volume 150 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:49:03.924Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:40:59.110Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:23:58.176Z":{
+    "message":"Commando: $play vmz foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:47:04.627Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:32:02.090Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:12.288Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-06T19:03:53.536Z":{
+    "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:43:57.111Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear 101 -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:23:52.070Z":{
+    "message":"Commando: $join foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:54.096Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $playing -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:19:47.214Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T00:43:06.770Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear$clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:37:42.366Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $volume -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T01:35:41.886Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   }
 }

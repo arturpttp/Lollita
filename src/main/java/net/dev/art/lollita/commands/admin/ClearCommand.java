@@ -1,4 +1,4 @@
-package net.dev.art.lollita.commands.all;
+package net.dev.art.lollita.commands.admin;
 
 import net.dev.art.lollita.commands.Command;
 import net.dev.art.lollita.managers.API;
@@ -30,5 +30,10 @@ public class ClearCommand extends Command {
             }
         }
         return true;
+    }
+
+    @Override
+    public CommandPermission permission() {
+        return CommandPermission.ADMIN;
     }
 }

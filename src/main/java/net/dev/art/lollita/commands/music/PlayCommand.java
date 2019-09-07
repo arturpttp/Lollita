@@ -44,6 +44,10 @@ public class PlayCommand extends Command {
 
     @Override
     public boolean onCommand(GuildMessageReceivedEvent event, String[] args) {
+        if (args.length <= 1) {
+            getHelpEmbed().send(channel);
+            return false;
+        }
         AudioManager audioManager = event.getGuild().getAudioManager();
         EmbedManager embed = new EmbedManager();
 

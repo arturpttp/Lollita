@@ -21,14 +21,13 @@ public class MessageManager {
         return new EmbedBuilder().setColor(Color.RED).setTitle("Error!").addField(title, description, true).build();
     }
 
-    public static MessageEmbed userInfo(BUser user) {
-        EmbedBuilder builder = new EmbedBuilder();
+    public static EmbedManager userInfo(BUser user) {
+        EmbedManager builder = new EmbedManager();
         builder.setColor(Color.BLUE);
-        builder.addField("Nome", user.getName(), false);
-        builder.addField("Ex", user.getXp() + "", false);
+        builder.addField("Xp", user.getXp() + "", false);
         builder.addField("Nivel", user.getLevel().getLevel() + "", false);
         builder.addField("Creditos", user.getCredits() + "", false);
-        return builder.build();
+        return builder;
     }
 
     public static void send(String message, TextChannel channel) {

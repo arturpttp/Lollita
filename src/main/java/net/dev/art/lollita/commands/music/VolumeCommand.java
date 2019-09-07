@@ -35,7 +35,7 @@ public class VolumeCommand extends Command {
                 return false;
             }
         }else{
-            sendEmbed(error("Argumentos insuficientes", "Digite o novo volume"), event.getChannel());
+            getHelpEmbed().send(channel);
             return false;
         }
         return true;

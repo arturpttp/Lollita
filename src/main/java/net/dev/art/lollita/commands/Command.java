@@ -11,6 +11,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public abstract class Command extends EventsManager {
 
@@ -55,11 +56,16 @@ public abstract class Command extends EventsManager {
     public EmbedManager getHelpEmbed() {
         EmbedManager embed = new EmbedManager();
         embed.setColor(bot.getJda().getRoles().get(0).getColor());
-        embed.setDescription("**__✔ Commando:__** ``" + Lollita.prefix + invoke + "``\n``" +
-                             help + "``\n" +
-                             "**__❔ Como usar:__** ``" + Lollita.prefix + usage + "``\n" +
-                             "**__❌ Permissões__**" + "\n``" +
-                             permission.message() + "``");
+        embed.addOutlineField("**__✔ Commando:__ ``"+Lollita.prefix + invoke+"``**", help);
+        embed.addOutlineField("**__❔ Como usar:__ **", "**``"+Lollita.prefix + usage+"``**");
+        embed.addOutlineField("**__❌ Permissões__**", "``"+permission.message()+"``");
+        /*
+        embed.setDescription("**__❌ Permissões__** ``" + Lollita.prefix + invoke + "``\n``" +
+         help + "``\n" +
+         "**__❔ Como usar:__** ``" + Lollita.prefix + usage + "``\n" +
+         "**__❌ Permissões__**" + "\n``" +
+         permission.message() + "``");
+         */
         embed.setThumbnail(event.getJDA().getSelfUser().getAvatarUrl());
         embed.setAuthor(event.getAuthor());
         embed.setFooter(category.getName(), event.getJDA().getSelfUser());
