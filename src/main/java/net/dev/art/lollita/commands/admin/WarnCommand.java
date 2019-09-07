@@ -40,6 +40,7 @@ public class WarnCommand extends Command {
                 reason = MessageManager.getMenssage(args, 2);
         }
         if (event.getMessage().getAttachments().size() > 0) {
+            e.setImage(event.getMessage().getAttachments().get(0).getUrl());
             reason += "\n"+event.getMessage().getAttachments().get(0).getUrl();
         }
         e.successEmbed("Punição aplicada com sucesso vá até " + lChannel.getAsMention() + " para ver!").send(channel);

@@ -1,13 +1,17 @@
 package net.dev.art.lollita.objects;
 
+import net.dev.art.lollita.Utils;
 import net.dev.art.lollita.config.Config;
+import net.dev.art.lollita.managers.API;
 import net.dev.art.lollita.managers.UserManager;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BUser {
 
@@ -38,12 +42,13 @@ public class BUser {
         UserManager.users.put(id, this);
     }
 
-    public BUser addWarn(BUser author, String reason) {
-        warns.add(new Warn(this, author, reason));
-        return this;
+    public Warn addWarn(BUser author, String reason) {
+        Warn w = new Warn(this, author, reason);
+        warns.add(w);
+        return w;
     }
 
-    public BUser addWarn(User author, String reason) {
+    public Warn addWarn(User author, String reason) {
         return addWarn(UserManager.get(author.getIdLong()), reason);
     }
 
@@ -143,7 +148,7 @@ public class BUser {
         }catch (Exception e) {
             config.set(id + "", new JSONObject());
         }
-        JSONObject warnsObj = new JSONObject();
+        /*JSONObject warnsObj = new JSONObject();
         int i = 1;
         for (Warn warn : warns) {
             JSONObject w = new JSONObject();
@@ -152,13 +157,15 @@ public class BUser {
             w.put("reason", warn.getReason());
             warnsObj.put(i+"", w);
             i++;
-        }
+        }*/
+        JSONArray arr = new JSONArray();
+        warns.forEach(warn -> arr.put(warn.toJson()));
         JSONObject obj = config.getSection(id + "")
                 .put("name", name)
                 .put("xp", xp)
                 .put("level", level.getLevel())
                 .put("credits", credits)
-                .put("warns", warnsObj);
+                .put("warns", arr);
         return obj;
     }
 
@@ -174,15 +181,11 @@ public class BUser {
             }
         }
         BUser bUser =  new BUser(name, Long.parseLong(id), xp, user, level, credits);
-        if (!obj.has("warns")) obj.put("warns", new JSONObject());
-        JSONObject warnList = obj.getJSONObject("warns");
-        if (warnList.length() > 0)
-            for (int i = 0; i < warnList.length(); i++) {
-                if (!warnList.has(i+"")) warnList.put(i+"", new JSONObject());
-                JSONObject warn = warnList.getJSONObject(i+"");
-                BUser author = UserManager.get(Long.parseLong(warn.getString("author")));
-                String reason = warn.getString("reason");
-                bUser.warns.add(new Warn(bUser, author, reason));
+        JSONArray warnsArray = obj.getJSONArray("warns");
+        if (warnsArray.length() > 0)
+            for (int i = 0; i < warnsArray.length(); i++) {
+                JSONObject j = warnsArray.getJSONObject(i);
+                Warn w = bUser.addWarn(UserManager.get(j.getLong("author")), j.getString("reason"));
             }
         return bUser;
     }

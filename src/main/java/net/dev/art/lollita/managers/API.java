@@ -13,6 +13,24 @@ public class API {
         return -1;
     }
 
+    public static long getLong(String n){
+        try {
+            return Long.parseLong(n);
+        }catch (NumberFormatException e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
+    public static double getDouble(String n){
+        try {
+            return Double.parseDouble(n);
+        }catch (NumberFormatException e){
+            e.printStackTrace();
+        }
+        return -1;
+    }
+
     public static long getNow() {
         return System.currentTimeMillis();
     }
