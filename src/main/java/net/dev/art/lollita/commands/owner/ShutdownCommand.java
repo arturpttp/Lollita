@@ -11,6 +11,7 @@ public class ShutdownCommand extends Command {
 
     @Override
     public boolean onCommand(GuildMessageReceivedEvent event, String[] args) {
+        event.getMessage().delete().queue();
         bot.shutdown();
         return true;
     }

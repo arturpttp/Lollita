@@ -52,7 +52,7 @@ public class UsersListener extends EventsManager {
             bot.getUserManager().delete(author);
         }
         BUser user = bot.getUserManager().get(event.getAuthor().getIdLong());
-        if (!event.getMessage().getContentRaw().startsWith(Lollita.prefix)) {
+        if (!event.getMessage().getContentRaw().startsWith(Lollita.prefix) && !event.getAuthor().isBot() && !event.getAuthor().isFake() && !event.isWebhookMessage()) {
             int xp = 5 + new Random().nextInt(15);
             user.addXp(xp);
             if (user.upLevel()) {

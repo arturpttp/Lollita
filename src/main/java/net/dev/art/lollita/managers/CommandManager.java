@@ -26,6 +26,12 @@ public class CommandManager {
         instance = this;
     }
 
+    public static void unregisterAll() {
+        COMMANDS.values().forEach(command -> command.unregister());
+        COMMANDS.clear();
+        all.clear();
+    }
+
     public static List<Command> getAll() {
         return all;
     }

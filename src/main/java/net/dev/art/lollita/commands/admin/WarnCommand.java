@@ -39,18 +39,21 @@ public class WarnCommand extends Command {
                 motivated = true;
                 reason = MessageManager.getMenssage(args, 2);
         }
+        e.successEmbed("Punição aplicada com sucesso vá até " + lChannel.getAsMention() + " para ver!").send(channel);
         if (event.getMessage().getAttachments().size() > 0) {
             e.setImage(event.getMessage().getAttachments().get(0).getUrl());
             reason += "\n"+event.getMessage().getAttachments().get(0).getUrl();
         }
-        e.successEmbed("Punição aplicada com sucesso vá até " + lChannel.getAsMention() + " para ver!").send(channel);
         e.setAuthor(event.getAuthor()).setFooter(user.getUser()).setTitle("Punição")
                 .setDescription("Usuario: " + user.getUser().getAsMention() + "\n" +
-                        "Autor: " + event.getAuthor().getAsMention()/* + "\n" +
-                            "Motivo: " + reason*/)
+                        "Autor: " + event.getAuthor().getAsMention())
             .addOutlineField("Motivo", reason).setThumbnail(user.getUser().getAvatarUrl()).send(lChannel);
             user.addWarn(event.getAuthor(), reason);
-
+            try {
+                e.send(user.getUser().openPrivateChannel().complete());
+            }catch (Exception err) {
+                e.clear().infoEmbed("❌ " + user.getName() + " está com o canal privado desabilitado").send(channel);
+            }
         }
         return true;
     }

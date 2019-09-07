@@ -69,9 +69,14 @@
     "level":1,
     "credits":0,
     "warns":[
+      {
+        "reason":"Abuso de autoridade https://cdn.discordapp.com/attachments/617381405738926101/619940574249615392/unknown.png",
+        "author":296301004960301056,
+        "user":296301004960301056
+      }
     ],
     "name":"Artur - SA",
-    "xp":0
+    "xp":49
   },
   "297153970613387264":{
     "level":1,

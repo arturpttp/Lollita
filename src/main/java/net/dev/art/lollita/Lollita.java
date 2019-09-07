@@ -11,12 +11,11 @@ import java.io.IOException;
 
 public class Lollita {
 
-    public static Bot bot;
     public static String name, prefix, owner, token, storage_path;
     private static Config config;
     private static Bot lollita;
 
-    public static void reload() {
+    public static void config() {
         config = new Config("assets/config.json");
         name = config.getString("name");
         prefix = config.getString("prefix");
@@ -26,8 +25,20 @@ public class Lollita {
         config.save();
     }
 
+    public static void reload() {
+        config();
+        CommandManager.unregisterAll();
+        EventsManager.unregisterAll();
+        try {
+            loadClasses();
+        } catch (IOException | ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
+        }
+        lollita.reload();
+    }
+
     private static void run() {
-        reload();
+        config();
         try {
             lollita = new Bot(token);
             loadClasses();

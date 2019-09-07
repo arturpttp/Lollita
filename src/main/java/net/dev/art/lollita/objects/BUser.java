@@ -169,15 +169,17 @@ public class BUser {
         return obj;
     }
 
-    public static BUser fromJson(JSONObject obj, Bot bot, String id) {
+    public static boolean fromJson(JSONObject obj, Bot bot, String id) {
         String name = obj.getString("name");
         long xp = obj.getLong("xp");
         Level level = Level.get(obj.getInt("level"));
         int credits = obj.getInt("credits");
         User user = null;
         for (Guild guild : bot.getJda().getGuilds()) {
-            if ((user = guild.getMemberById(id).getUser()) == null) {
-                break;
+            try {
+                user = guild.getMemberById(id).getUser();
+            }catch (NullPointerException e){
+                return false;
             }
         }
         BUser bUser =  new BUser(name, Long.parseLong(id), xp, user, level, credits);
@@ -187,7 +189,7 @@ public class BUser {
                 JSONObject j = warnsArray.getJSONObject(i);
                 Warn w = bUser.addWarn(UserManager.get(j.getLong("author")), j.getString("reason"));
             }
-        return bUser;
+        return true;
     }
 
 }

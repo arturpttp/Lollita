@@ -5,8 +5,20 @@
   "2019-09-06T19:40:42.869Z":{
     "message":"Commando: -join foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:06:27.805Z":{
+    "message":"Commando: $clear 5 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:23:15.786Z":{
+    "message":"Commando: $invite send <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:55:46.229Z":{
+    "message":"Commando: $ban <@544142216734572558> seu lixo foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:40:44.018Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:10:53.074Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: ~clear -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T01:23:32.855Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $volume -> author -> `Artur - SA#4536`!"
@@ -22,6 +34,9 @@
   },
   "2019-09-07T13:46:08.237Z":{
     "message":"Commando: $warn <@275731494641729536> Eae meu parça! foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:10:43.721Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T04:49:42.455Z":{
     "message":"Commando: $warn <@617082724250943490> Fez merda foi executado com sucesso por `Artur - SA#4536`!"
@@ -59,11 +74,17 @@
   "2019-09-07T01:25:33.225Z":{
     "message":"Commando: $playing foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:06:46.633Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T01:37:45.522Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T15:10:06.827Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $warnslist <@296301004960301056> -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:16:12.753Z":{
+    "message":"Commando: $mcserver redesky.com foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-06T19:03:50.565Z":{
     "message":"Commando: $ping foi executado com sucesso por `Artur - SA#4536`!"
@@ -73,6 +94,9 @@
   },
   "2019-09-07T01:37:18.332Z":{
     "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:06:59.062Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T00:43:51.176Z":{
     "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
@@ -92,6 +116,9 @@
   "2019-09-07T01:24:28.956Z":{
     "message":"Commando: $volume 5 foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:21:27.811Z":{
+    "message":"Commando: $invite <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T14:02:01.788Z":{
     "message":"Commando: $warn <@275731494641729536> Wow, lol RISE RISE RISE foi executado com sucesso por `Artur - SA#4536`!"
   },
@@ -104,17 +131,29 @@
   "2019-09-07T01:25:30.404Z":{
     "message":"Commando: $pause foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:26:23.058Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $ban -> author -> `Artur - SA#4536`!"
+  },
   "2019-09-07T15:12:25.345Z":{
     "message":"Commando: $warnslist <@275731494641729536> foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-06T19:40:59.110Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:02:30.735Z":{
+    "message":"Commando: $warn <@296301004960301056> Abuso de autoridade foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:28:26.107Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $ban -> author -> `Artur - SA#4536`!"
+  },
   "2019-09-07T04:46:22.769Z":{
     "message":"Commando: $userinfo <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T15:00:07.147Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:26:43.600Z":{
+    "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T01:37:12.288Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
@@ -128,6 +167,9 @@
   "2019-09-07T04:44:55.233Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $warn -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T17:23:11.609Z":{
+    "message":"Commando: $invite send foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T00:43:57.111Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear 101 -> author -> `Artur - SA#4536`!"
   },
@@ -137,8 +179,14 @@
   "2019-09-07T01:19:47.214Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T17:17:31.612Z":{
+    "message":"Commando: $mcserver redesky.com foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T01:37:42.366Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $volume -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:07:06.202Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: -clear -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T01:21:54.875Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $play -> author -> `Artur - SA#4536`!"
@@ -146,14 +194,23 @@
   "2019-09-07T01:44:32.763Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $celar -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T17:11:16.042Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:40:08.921Z":{
     "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:48:31.883Z":{
+    "message":"Commando: $warnslist <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T15:12:21.961Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $warnslist adadad -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T01:24:47.229Z":{
     "message":"Commando: $volume 3 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:06:19.547Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T01:37:26.103Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
@@ -167,11 +224,20 @@
   "2019-09-07T01:21:20.452Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T17:06:22.073Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:10:49.393Z":{
+    "message":"Commando: ~reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T01:26:01.738Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T14:58:17.127Z":{
     "message":"Commando: $userinfo <@275731494641729536> foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:16:03.694Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $mcserver -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T01:25:36.495Z":{
     "message":"Commando: $pause foi executado com sucesso por `Artur - SA#4536`!"
@@ -184,6 +250,9 @@
   },
   "2019-09-07T14:03:14.724Z":{
     "message":"Commando: $warn <@275731494641729536> Wow, lol RISE RISE RISE 2 foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:28:52.021Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $ban -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T00:48:00.309Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear -> author -> `Artur - SA#4536`!"
@@ -212,8 +281,14 @@
   "2019-09-07T04:00:39.071Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:11:04.291Z":{
+    "message":"Commando: ~reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T01:37:25.323Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:06:21.556Z":{
+    "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T04:45:28.451Z":{
     "message":"Commando: $userinfo <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
@@ -260,11 +335,20 @@
   "2019-09-07T04:46:14.228Z":{
     "message":"Commando: $userinfo <@296301004960301056> foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:26:20.048Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T00:47:04.627Z":{
     "message":"Commando: $clear 100 foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:11:10.853Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T14:58:24.760Z":{
     "message":"Commando: $userinfo <@275731494641729536> foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:22:53.605Z":{
+    "message":"Commando: $invite foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T01:32:02.090Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $userinfo -> author -> `Artur - SA#4536`!"
@@ -272,8 +356,14 @@
   "2019-09-07T04:44:47.192Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-07T17:21:11.366Z":{
+    "message":"Commando: $invite foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-07T01:23:52.070Z":{
     "message":"Commando: $join foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:23:05.181Z":{
+    "message":"Commando: $invite create foi executado com sucesso por `Artur - SA#4536`!"
   },
   "2019-09-07T14:57:08.977Z":{
     "message":"Commando: $warn <@275731494641729536> Wow, lol RISE RISE RISE foi executado com sucesso por `Artur - SA#4536`!"
@@ -287,7 +377,22 @@
   "2019-09-07T15:09:41.102Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $warnslist -> author -> `Artur - SA#4536`!"
   },
+  "2019-09-07T17:07:06.185Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: -clear -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:06:59.060Z":{
+    "message":"Commando: -help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:26:33.969Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $ban a -> author -> `Artur - SA#4536`!"
+  },
   "2019-09-07T01:35:41.886Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:27:07.835Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $ban -> author -> `Artur - SA#4536`!"
+  },
+  "2019-09-07T17:28:24.220Z":{
+    "message":"Commando: $reload foi executado com sucesso por `Artur - SA#4536`!"
   }
 }

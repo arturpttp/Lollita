@@ -73,6 +73,11 @@ public abstract class Command extends EventsManager {
         return embed;
     }
 
+    public void unregister() {
+        registred = false;
+        bot.getJda().removeEventListener(this);
+    }
+
     public static enum  CommandCategory {
 
         FUNNY("Funny", Color.MAGENTA), ADMIN("Admin", Color.CYAN), MUSIC("Music", Color.PINK), MINECRAFT("Minecraft", Color.GREEN), MANAGEMENT("Management", Color.ORANGE), UTIL("Utilities", Color.BLUE);

@@ -100,9 +100,15 @@ public class UserManager {
 
     public void loadAll() {
         Config config = new Config(Lollita.storage_path+"users.json");
+        List<String> toDelete = new ArrayList<>();
         for (String key : config.getJSONObject().keySet()) {
             JSONObject section = config.getJSON(key);
-            BUser.fromJson(section, bot, key);
+            boolean delete = BUser.fromJson(section, bot, key);
+            if (!delete) {
+                toDelete.add(key);
+            }
         }
+        if (toDelete.size() > 0)
+            toDelete.forEach(config::remove);
     }
 }

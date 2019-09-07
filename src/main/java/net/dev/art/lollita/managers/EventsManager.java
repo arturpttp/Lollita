@@ -20,4 +20,14 @@ public abstract class EventsManager extends ListenerAdapter {
         registred = true;
     }
 
+    public void unregister() {
+        registred = false;
+        bot.getJda().removeEventListener(this);
+    }
+
+    public static void unregisterAll(){
+        EVENTS.forEach(EventsManager::unregister);
+        EVENTS.clear();
+    }
+
 }

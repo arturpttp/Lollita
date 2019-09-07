@@ -2,6 +2,7 @@ package net.dev.art.lollita.managers;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.entities.PrivateChannel;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
@@ -16,6 +17,12 @@ public class EmbedManager {
     public EmbedManager() {
         this.builder = new EmbedBuilder();
         setColor(Color.MAGENTA);
+    }
+
+    public EmbedManager clear() {
+        this.builder = new EmbedBuilder();
+        setColor(Color.MAGENTA);
+        return this;
     }
 
     public EmbedManager defaultEmbed(Color color) {
@@ -144,6 +151,11 @@ public class EmbedManager {
     }
 
     public EmbedManager send(TextChannel channel) {
+        channel.sendMessage(build()).queue();
+        return this;
+    }
+
+    public EmbedManager send(PrivateChannel channel) {
         channel.sendMessage(build()).queue();
         return this;
     }
