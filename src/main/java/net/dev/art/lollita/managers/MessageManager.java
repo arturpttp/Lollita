@@ -27,6 +27,7 @@ public class MessageManager {
         builder.addField("Xp", user.getXp() + "", false);
         builder.addField("Nivel", user.getLevel().getLevel() + "", false);
         builder.addField("Creditos", user.getCredits() + "", false);
+        builder.addField("Warns", user.warns.size() + "", false);
         return builder;
     }
 

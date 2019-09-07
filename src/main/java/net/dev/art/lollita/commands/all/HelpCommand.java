@@ -29,7 +29,7 @@ public class HelpCommand extends Command {
             String commands = "";
             int i = 0;
             for (Command command : list) {
-                if (command.category == c) {
+                if (command.category() == c) {
                     i++;
                     String virgula = ", ";
                     if (list.indexOf(command) == (list.size() - 1)) virgula = "...";
@@ -37,7 +37,7 @@ public class HelpCommand extends Command {
                 }
             }
             if (i > 0) {
-                commands = commands.length() > max ? commands.substring(max, commands.length()-1) + "..." : commands;
+                commands = commands.length() > max ? commands.substring(0, Math.min(max, commands.length())) + "..." : commands;
                 embed.addOutlineField(c.getName(), commands);
             }
         }

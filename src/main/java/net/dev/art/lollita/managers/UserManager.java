@@ -27,21 +27,21 @@ public class UserManager {
         this.bot = bot;
     }
 
-    public BUser create(User user) {
+    public static BUser create(User user) {
         BUser bUser = new BUser(user.getName(), user.getIdLong(), 0L, user);
         users.put(user.getIdLong(), bUser);
         return bUser;
-    }
+}
 
-    public BUser get(Long id) {
+    public static BUser get(Long id) {
         return users.get(id);
     }
 
-    public void delete(User user) {
+    public static void delete(User user) {
         users.remove(user.getIdLong());
     }
 
-    public void delete(Long id) {
+    public static void delete(Long id) {
         users.remove(id);
     }
 

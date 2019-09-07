@@ -15,7 +15,7 @@ public class EmbedManager {
 
     public EmbedManager() {
         this.builder = new EmbedBuilder();
-        setColor(Color.WHITE);
+        setColor(Color.MAGENTA);
     }
 
     public EmbedManager defaultEmbed(Color color) {
