@@ -6,6 +6,7 @@ import org.json.JSONObject;
 import java.io.*;
 
 public class JSONWriter {
+
     private final BufferedWriter writer;
     private int space;
 

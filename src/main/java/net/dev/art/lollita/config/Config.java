@@ -101,7 +101,6 @@ public class Config {
             e.printStackTrace();
             Utils.print("Não foi possivel salvar o arquivo " + name);
         }
-
     }
 
     public boolean exists() {
