@@ -42,6 +42,11 @@ public class InviteCommand extends Command {
     }
 
     @Override
+    public CommandCategory category() {
+        return CommandCategory.MANAGEMENT;
+    }
+
+    @Override
     public CommandPermission permission() {
         return CommandPermission.ADMIN;
     }

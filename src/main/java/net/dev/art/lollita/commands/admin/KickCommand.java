@@ -4,18 +4,14 @@ import net.dev.art.lollita.Settings;
 import net.dev.art.lollita.commands.Command;
 import net.dev.art.lollita.managers.EmbedManager;
 import net.dev.art.lollita.managers.MessageManager;
-import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.exceptions.HierarchyException;
 
-import java.awt.*;
-import java.util.concurrent.TimeUnit;
-
-public class BanCommand extends Command {
-    public BanCommand() {
-        super("ban", "ban a user", "ban <user>");
+public class KickCommand extends Command {
+    public KickCommand() {
+        super("kick", "kick a user", "kick <user>");
     }
 
     @Override
@@ -38,14 +34,14 @@ public class BanCommand extends Command {
             String start = reason.length() == 0 ? "" : "\n";
             reason += start+event.getMessage().getAttachments().get(0).getUrl();
         }
-        e.setAuthor(event.getAuthor()).setFooter("Banimento", user).setTitle("Banido")
+        e.setAuthor(event.getAuthor()).setFooter("Expulção", user).setTitle("Expulso")
                 .setDescription("Usuario: " + user.getAsMention() + "\n" +
                         "Autor: " + event.getAuthor().getAsMention())
                 .addOutlineField("Motivo", reason).setThumbnail(user.getAvatarUrl());
         try{
-            event.getGuild().ban(user, 1, reason).queue();
+            event.getGuild().kick(event.getGuild().getMember(user), reason).queue();
         }catch (HierarchyException ex) {
-            e.clear().errorEmbed("Não posso banir alguem com cargo maior ou igual ao meu!").send(channel);
+            e.clear().errorEmbed("Não posso expulsar alguem com cargo maior ou igual ao meu!").send(channel);
             return false;
         }
         e.send(lChannel);
