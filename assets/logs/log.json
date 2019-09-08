@@ -2,6 +2,9 @@
   "2019-09-06T19:39:15.013Z":{
     "message":"Commando: $help foi executado com sucesso por `Artur - SA#4536`!"
   },
+  "2019-09-08T15:14:41.715Z":{
+    "message":"Commando: $vote v foi executado com sucesso por `Artur - SA#4536`!"
+  },
   "2019-09-06T19:40:42.869Z":{
     "message":"Commando: -join foi executado com sucesso por `Artur - SA#4536`!"
   },
@@ -397,6 +400,9 @@
   },
   "2019-09-07T15:10:19.096Z":{
     "message":"Commando: $warnslist <@275731494641729536> foi executado com sucesso por `Artur - SA#4536`!"
+  },
+  "2019-09-08T15:14:28.642Z":{
+    "message":"Ocorreu uma falha ao tentar executar o commando: $vote -> author -> `Artur - SA#4536`!"
   },
   "2019-09-07T00:43:06.770Z":{
     "message":"Ocorreu uma falha ao tentar executar o commando: $clear$clear -> author -> `Artur - SA#4536`!"

@@ -1,11 +1,14 @@
 package net.dev.art.lollita.managers;
 
 import net.dev.art.lollita.Lollita;
+import net.dev.art.lollita.Settings;
 import net.dev.art.lollita.config.Config;
 import net.dev.art.lollita.objects.BUser;
 import net.dev.art.lollita.objects.Bot;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 import org.json.JSONObject;
@@ -111,4 +114,14 @@ public class UserManager {
         if (toDelete.size() > 0)
             toDelete.forEach(config::remove);
     }
+
+    public static boolean isAdmin(Member member, Guild guild) {
+        return member.hasPermission(Permission.ADMINISTRATOR) || member.getRoles().contains(guild.getRoleById(Settings.ADMIN_ROLE));
+    }
+
+    public static boolean isAdmin(User user, Guild guild) {
+        Member member = guild.getMember(user);
+        return isAdmin(member, guild);
+    }
+
 }

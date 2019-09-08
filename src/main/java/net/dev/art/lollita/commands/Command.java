@@ -13,6 +13,8 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import java.awt.*;
 import java.util.ArrayList;
 
+import static net.dev.art.lollita.Utils.print;
+
 public abstract class Command extends EventsManager {
 
     public String invoke, help, usage;
