@@ -3,6 +3,7 @@ package net.dev.art.lollita.listeners;
 import net.dev.art.lollita.Lollita;
 import net.dev.art.lollita.Settings;
 import net.dev.art.lollita.Utils;
+import net.dev.art.lollita.commands.Command;
 import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
@@ -14,7 +15,7 @@ public class CommandListener extends EventsManager {
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
         if (event.getAuthor().isBot() || event.isWebhookMessage()) return;
-        if (event.getMessage().getContentRaw().startsWith(Lollita.prefix)) {
+        if (CommandManager.isCommand(event.getMessage().getContentRaw())) {
             boolean success = CommandManager.handle(event);
             if (success) {
                 if (Settings.DEBUG)

@@ -3,6 +3,7 @@ package net.dev.art.lollita.objects;
 import net.dev.art.lollita.Utils;
 import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.UserManager;
+import net.dev.art.lollita.managers.VoteManager;
 import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -11,6 +12,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import javax.security.auth.login.LoginException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,13 +49,20 @@ public class Bot {
 
     public void shutdown() {
         Utils.print("Desligando...");
-        getUserManager().saveAll();
-        getUserManager().loadAll();
+        reload();
         jda.shutdown();
         System.exit(-1);
     }
 
     public void reload() {
+            this.jda.getGuilds().forEach(guild -> {
+                try {
+                    VoteManager.savePoll(guild);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+            VoteManager.loadPolls(this.jda);
         getUserManager().saveAll();
         getUserManager().loadAll();
     }

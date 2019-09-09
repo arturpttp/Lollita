@@ -2,6 +2,7 @@ package net.dev.art.lollita.listeners;
 
 import net.dev.art.lollita.Lollita;
 import net.dev.art.lollita.Settings;
+import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dev.art.lollita.objects.BUser;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -52,7 +53,7 @@ public class UsersListener extends EventsManager {
             bot.getUserManager().delete(author);
         }
         BUser user = bot.getUserManager().get(event.getAuthor().getIdLong());
-        if (!event.getMessage().getContentRaw().startsWith(Lollita.prefix) && !event.getAuthor().isBot() && !event.getAuthor().isFake() && !event.isWebhookMessage()) {
+        if (!CommandManager.isCommand(event.getMessage().getContentRaw()) && !event.getAuthor().isBot() && !event.getAuthor().isFake() && !event.isWebhookMessage()) {
             int xp = 5 + new Random().nextInt(15);
             user.addXp(xp);
             if (user.upLevel()) {

@@ -2,6 +2,7 @@ package net.dev.art.lollita.managers;
 
 import net.dev.art.lollita.Lollita;
 import net.dev.art.lollita.Settings;
+import net.dev.art.lollita.Utils;
 import net.dev.art.lollita.objects.Bot;
 import net.dev.art.lollita.commands.Command;
 import net.dv8tion.jda.api.entities.ChannelType;
@@ -42,6 +43,13 @@ public class CommandManager {
 
     public static Command getCommand(String invoke) {
         return COMMANDS.get(invoke);
+    }
+
+    public static boolean isCommand(String message) {
+        String msg = message;
+        msg = msg.contains(" ") ? msg.split(" ")[0] : msg;
+        msg = msg.replace(Lollita.prefix, "");
+        return message.startsWith(Lollita.prefix) && COMMANDS.containsKey(msg);
     }
 
     public static boolean handle(GuildMessageReceivedEvent event) {
