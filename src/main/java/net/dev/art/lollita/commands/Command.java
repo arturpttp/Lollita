@@ -120,6 +120,10 @@ public abstract class Command extends EventsManager {
             }
             return "";
         }
-
     }
+
+    public void print(String s) {
+        print(s);
+    }
+
 }
