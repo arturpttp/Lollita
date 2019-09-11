@@ -1,12 +1,14 @@
 package net.dev.art.lollita;
 
 import net.dev.art.lollita.config.Config;
+import net.dev.art.lollita.languages.Language;
 import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dev.art.lollita.objects.Bot;
 import net.dev.art.lollita.commands.Command;
 
 import javax.security.auth.login.LoginException;
+import java.io.File;
 import java.io.IOException;
 
 public class Lollita {
@@ -23,6 +25,15 @@ public class Lollita {
         token = config.getString("token");
         storage_path = config.getString("storage_path");
         config.save();
+    }
+
+    public static void loadLanguages() {
+        File file = new File(Language.path);
+        if (file.exists() && file.listFiles().length > 0) {
+            for (File f : file.listFiles()) {
+                Language l = new Language(f.getName());
+            }
+        }
     }
 
     public static void reload() {
@@ -55,6 +66,13 @@ public class Lollita {
                     eventsManager.register(lollita);
             }else if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
                 Command command = (Command) clz.newInstance();
+                command.category = command.category();
+                command.permission = command.permission();
+                command.aliases = command.aliases();
+                if (command.aliases().length > 0)
+                    for (String alias : command.aliases()) {
+                        CommandManager.LABELS.put(alias, command);
+                    }
                 if (!CommandManager.all.contains(command)) {
                     CommandManager.all.add(command);
                 }

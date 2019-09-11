@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 public class CommandManager {
 
     public static final Map<String, Command> COMMANDS = new HashMap<>();
+    public static final Map<String, Command> LABELS = new HashMap<>();
     public static final List<Command> all = new ArrayList<>();
     public Bot bot;
     private static CommandManager instance;
@@ -28,7 +29,7 @@ public class CommandManager {
     }
 
     public static void unregisterAll() {
-        COMMANDS.values().forEach(command -> command.unregister());
+        COMMANDS.values().forEach(Command::unregister);
         COMMANDS.clear();
         all.clear();
     }
@@ -42,28 +43,31 @@ public class CommandManager {
     }
 
     public static Command getCommand(String invoke) {
-        return COMMANDS.get(invoke);
+        Command command = null;
+        command = LABELS.getOrDefault(invoke, null);
+        if (command == null)
+            command = COMMANDS.getOrDefault(invoke, null);
+        return command;
     }
 
     public static boolean isCommand(String message) {
-        String msg = message;
+        if (!message.startsWith(Lollita.prefix)) return false;
+        String msg = message.replace(Lollita.prefix, "");
         msg = msg.contains(" ") ? msg.split(" ")[0] : msg;
-        msg = msg.replace(Lollita.prefix, "");
-        return message.startsWith(Lollita.prefix) && COMMANDS.containsKey(msg);
+        return LABELS.containsKey(msg) || COMMANDS.containsKey(msg);
     }
 
     public static boolean handle(GuildMessageReceivedEvent event) {
+        String message = event.getMessage().getContentRaw();
         final String[] split = event.getMessage().getContentRaw().replaceFirst(
                 "(?i)" + Pattern.quote(Lollita.prefix), "").split("\\s+");
-        final String invoke = split[0].toLowerCase();
-
+        String invoke = message;
+        invoke = invoke.contains(" ") ? invoke.split(" ")[0] : invoke;
+        invoke = invoke.replace(Lollita.prefix, "");
         if(COMMANDS.containsKey(invoke)) {
             Command command = getCommand(invoke);
             final String[] arguments = event.getMessage().getContentRaw().replaceFirst(
                     "(?i)" + Pattern.quote(Lollita.prefix), "").split("\\s+");
-            /**final List<String> argsm = Arrays.asList(split).subList(1, split.length);
-             String[] args = new String[argsm.size() - 1];
-             argsm.subList(1, argsm.size()).toArray(args);*/
             if (command.permission() == Command.CommandPermission.OWNER && event.getAuthor().getIdLong() != Long.parseLong(Lollita.owner)) {
                 event.getChannel().sendMessage(Settings.NON_PERMISSION_MESSAGE).complete().delete().queueAfter(5, TimeUnit.SECONDS);
                 return false;

@@ -33,6 +33,11 @@ public class ClearCommand extends Command {
     }
 
     @Override
+    public String[] aliases() {
+        return new String[] {"limpar", "clean"};
+    }
+
+    @Override
     public CommandPermission permission() {
         return CommandPermission.ADMIN;
     }

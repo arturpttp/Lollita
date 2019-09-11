@@ -14,8 +14,10 @@ public class CommandListener extends EventsManager {
 
     @Override
     public void onGuildMessageReceived(@Nonnull GuildMessageReceivedEvent event) {
-        if (event.getAuthor().isBot() || event.isWebhookMessage()) return;
-        if (CommandManager.isCommand(event.getMessage().getContentRaw())) {
+        if (event.getAuthor().isBot() || event.isWebhookMessage() || event.getAuthor().isFake()) return;
+        String message = event.getMessage().getContentRaw();
+        if (!message.startsWith(Lollita.prefix)) return;
+        if (CommandManager.getCommand(message) != null) {
             boolean success = CommandManager.handle(event);
             if (success) {
                 if (Settings.DEBUG)

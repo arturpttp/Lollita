@@ -49,9 +49,9 @@ public class AIOWriter {
 
             if (object instanceof Number || object instanceof Boolean)
                 writer.write(space + object);
-            else if (object instanceof JSONObject)
+            else if (object instanceof AIOObject)
                 write((AIOObject) object, true);
-            else if (object instanceof JSONArray)
+            else if (object instanceof AIOList)
                 write((AIOList) object);
             else
                 writer.write(space + STRING_START + object.toString() + STRING_START);

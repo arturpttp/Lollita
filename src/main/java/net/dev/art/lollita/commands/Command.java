@@ -26,6 +26,7 @@ public abstract class Command extends EventsManager {
     public TextChannel channel;
     public Bot bot;
     public boolean registred = false;
+    public String[] aliases;
     public Command(String invoke, String help) {
         this(invoke, help, invoke);
     }
@@ -61,23 +62,35 @@ public abstract class Command extends EventsManager {
         embed.addOutlineField("**__✔ Commando:__ ``"+Lollita.prefix + invoke+"``**", help);
         embed.addOutlineField("**__❔ Como usar:__ **", "**``"+Lollita.prefix + usage+"``**");
         embed.addOutlineField("**__❌ Permissões__**", "``"+permission.message()+"``");
-        /*
-        embed.setDescription("**__❌ Permissões__** ``" + Lollita.prefix + invoke + "``\n``" +
-         help + "``\n" +
-         "**__❔ Como usar:__** ``" + Lollita.prefix + usage + "``\n" +
-         "**__❌ Permissões__**" + "\n``" +
-         permission.message() + "``");
-         */
         embed.setThumbnail(event.getJDA().getSelfUser().getAvatarUrl());
         embed.setAuthor(event.getAuthor());
         embed.setFooter(category.getName(), event.getJDA().getSelfUser());
-        embed.timestamp();
+                embed.timestamp();
+                if (aliases().length > 0) {
+                    StringBuilder aliases = new StringBuilder();
+                    int i = 0;
+                    for (String alias : aliases()) {
+                        alias = Lollita.prefix + alias;
+                        if (i == (aliases().length-1)) {
+                            alias=" `"+alias+"`";
+                        }else {
+                            alias = "`" + alias + "`, ";
+                        }
+                aliases.append(alias);
+                i++;
+            }
+            embed.addOutlineField("\uD83D\uDD00 Alternativas", aliases.toString());
+        }
         return embed;
     }
 
     public void unregister() {
         registred = false;
         bot.getJda().removeEventListener(this);
+    }
+
+    public String[] aliases() {
+        return new String[] {};
     }
 
     public static enum  CommandCategory {
