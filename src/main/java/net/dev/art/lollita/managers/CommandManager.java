@@ -18,7 +18,6 @@ import java.util.regex.Pattern;
 public class CommandManager {
 
     public static final Map<String, Command> COMMANDS = new HashMap<>();
-    public static final Map<String, Command> LABELS = new HashMap<>();
     public static final List<Command> all = new ArrayList<>();
     public Bot bot;
     private static CommandManager instance;
@@ -39,22 +38,29 @@ public class CommandManager {
     }
 
     public static void addCommand(Command command) {
+        command.category = command.category();
+        command.permission = command.permission();
+        command.aliases = command.aliases();
         COMMANDS.put(command.invoke, command);
+        if (command.aliases().length > 0)
+            for (String s : command.aliases())
+                COMMANDS.put(s, command);
     }
 
     public static Command getCommand(String invoke) {
-        Command command = null;
-        command = LABELS.getOrDefault(invoke, null);
-        if (command == null)
-            command = COMMANDS.getOrDefault(invoke, null);
-        return command;
+        Utils.print("[1] "+invoke);
+        invoke = invoke.contains(" ") ? invoke.split(" ")[0] : invoke;
+        Utils.print("[2] "+invoke);
+        invoke = invoke.contains(Lollita.prefix) ? invoke.replace(Lollita.prefix, "") : invoke;
+        Utils.print("[3] "+invoke);
+        return COMMANDS.get(invoke);
     }
 
     public static boolean isCommand(String message) {
         if (!message.startsWith(Lollita.prefix)) return false;
         String msg = message.replace(Lollita.prefix, "");
         msg = msg.contains(" ") ? msg.split(" ")[0] : msg;
-        return LABELS.containsKey(msg) || COMMANDS.containsKey(msg);
+        return COMMANDS.containsKey(msg);
     }
 
     public static boolean handle(GuildMessageReceivedEvent event) {

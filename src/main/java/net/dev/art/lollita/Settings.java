@@ -3,7 +3,7 @@ package net.dev.art.lollita;
 public class Settings {
 
     public static final String NON_PERMISSION_MESSAGE = "Você não tem permissão!";
-    public static final String ONLY_PRIVATE__MESSAGE = "Você não tem permissão!";
+    public static final String ONLY_PRIVATE__MESSAGE = "Apenas no privado!";
 
     public static final String WELCOME_CHANNEL = "517325773905068034";
     public static final String LOG_CHANNEL = "534833231690989568";

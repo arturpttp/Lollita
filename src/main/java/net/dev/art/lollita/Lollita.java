@@ -1,11 +1,11 @@
 package net.dev.art.lollita;
 
+import net.dev.art.lollita.commands.Command;
 import net.dev.art.lollita.config.Config;
 import net.dev.art.lollita.languages.Language;
 import net.dev.art.lollita.managers.CommandManager;
 import net.dev.art.lollita.managers.EventsManager;
 import net.dev.art.lollita.objects.Bot;
-import net.dev.art.lollita.commands.Command;
 
 import javax.security.auth.login.LoginException;
 import java.io.File;
@@ -48,7 +48,7 @@ public class Lollita {
         lollita.reload();
     }
 
-    private static void run() {
+    public static void run() {
         config();
         try {
             lollita = new Bot(token);
@@ -62,28 +62,14 @@ public class Lollita {
         for (Class clz : Utils.getClasses("net.dev.art.lollita")) {
             if (EventsManager.class.isAssignableFrom(clz) && clz != EventsManager.class && clz != Command.class) {
                 EventsManager eventsManager = (EventsManager) clz.newInstance();
-                if (!eventsManager.registred)
+                if (!eventsManager.registred) {
                     eventsManager.register(lollita);
-            }else if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
-                Command command = (Command) clz.newInstance();
-                command.category = command.category();
-                command.permission = command.permission();
-                command.aliases = command.aliases();
-                if (command.aliases().length > 0)
-                    for (String alias : command.aliases()) {
-                        CommandManager.LABELS.put(alias, command);
-                    }
-                if (!CommandManager.all.contains(command)) {
-                    CommandManager.all.add(command);
                 }
+            } else if (Command.class.isAssignableFrom(clz) && clz != Command.class) {
+                Command command = (Command) clz.newInstance();
                 if (!command.registred)
                     command.register(lollita);
             }
         }
     }
-
-    public static void main(String[] args) {
-        run();
-    }
-
 }
